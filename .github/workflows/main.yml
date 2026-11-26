@@ -35,6 +35,10 @@ jobs:
           
           rm -rf temp_bdix
 
+      - name: Clean up playlist
+        run: |
+          python3 scripts/cleanup_playlist.py bdix
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
